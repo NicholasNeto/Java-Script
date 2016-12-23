@@ -1,0 +1,10 @@
+server {
+    listen        127.0.0.1:8080;
+    server_name   serverUseCabecaJava;
+    access_log    /Users/nicholas/Desktop/useCabecaJava.access.log;
+    error_log     /Users/nicholas/Desktop/useCabecaJava.error.log;
+    location / {
+        root  /var/www/useCabecaJava;
+        index irock.html;
+    }
+}
