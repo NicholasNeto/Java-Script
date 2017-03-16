@@ -3,34 +3,16 @@
 	<head>
 		<title>iRock - A rocha virtual de estimação </title>
 			<h1 style = text-align:center >Minha Pedra de Estimação</h1>
-			<script type="text/javascript" src="cookie.js"></script>
-		<script type="text/javascript">
-			function touchRock() {
-				var userName = prompt("Qual o seu nome?", "Entre  com seu nome aqui.");
 
-				if(userName) {
-					alert("Eu gosto de atencão, " + userName + " Obrigado.");
-				} else {
-					userName = prompt("Qual é o seu nome ?", "Digite seu nome aqui.");
-					if(userName)
-						alert("Bom conhecer voce, " + userName + ".")
-					}
-				document.getElementById('rockImg').src = "rock_happy.png";
-				// Time or Timer
-				// setTimout("alert('testendo');", 6000);
-				setTimeout("document.getElementById('rockImg').src = 'rock.png';", 1 * 60 * 1000)
-				}	
-
-			function resizeRock(){
-				document.getElementById("rockImg").style.height = (document.body.clientWindowHeight - 100) * 0.9 
-			}
-		</script>
+		<script type="text/javascript" src="javaScript.js"></script>
+		<script type="text/javascript" src="cookie.js"></script>
+		
 	</head>
 
-	<body onload="alert('Hello, eu sou a rocha de estimação.');">
-		<div style="margin-top:100px; text-align:center">
-			<img id="rockImg" src="rock.png" alt="iRock" style="cursor:pointer" 
-			onclick = "touchRock();"/>
+	<body onload="alert('Hello, eu sou a rocha de estimação.'); resizeRock(); greetUser()">
+		<div style="margin-top:100px; text-align:center;">
+			<img id="rockImg" src="rock.png" alt="iRock" style="cursor:pointer" onclick="touchRock();"/>
 		</div>
 	</body>
 </html>
+
